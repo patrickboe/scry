@@ -5,7 +5,7 @@
 
 (define (litter-with-printfs stx) 
       (let-values ([(annotated breakmap)
-                    (annotate-stx stx
+                    (annotate-stx (expand stx)
                         (lambda (debug annotated original is-tail?)
                           (printf "BREAK-WRAP call.~ndebug:~n~s~nannotated:~n~s~noriginal:~n~s~nis-tail?~n~s"
                                   debug

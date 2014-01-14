@@ -6,4 +6,5 @@
   (lambda (stx)
     (litter-with-printfs (cadr (syntax->list stx)))))
 
-(littered a)
+(define a "hi")
+(littered (string-append a "lo"))
